@@ -249,7 +249,7 @@ def game_over_screen(final_game_surface, winner_face_image=None):
             top_offset += over_text.get_height() + spacing
 
         # Other texts
-        continue_text = game_over_font.render("Press any key to continue", True, WHITE)
+        continue_text = game_over_font.render("Press 'c' to continue", True, WHITE)
         elements.append((continue_text, (GAME_WIDTH//2 - continue_text.get_width()//2, top_offset)))
         top_offset += continue_text.get_height() + spacing
 
@@ -284,7 +284,7 @@ def game_over_screen(final_game_surface, winner_face_image=None):
                     cap.release()
                     cv2.destroyAllWindows()
                     sys.exit()
-                else:
+                elif event.key == pygame.K_c:
                     run = False
 
 def game_loop(single_player=True, snake1_head_image=None, snake2_head_image=None, player1_face_large=None, player2_face_large=None):
