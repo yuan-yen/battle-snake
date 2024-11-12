@@ -140,7 +140,7 @@ def capture_player_face(player_number):
         game_surface.blit(frame_surface, (0, 0))
 
         # Draw the square block in the center
-        square_size = min(GAME_WIDTH, GAME_HEIGHT) // 3
+        square_size = min(GAME_WIDTH, GAME_HEIGHT) // 1.5
         square_rect = pygame.Rect(
             (GAME_WIDTH - square_size) // 2,
             (GAME_HEIGHT - square_size) // 2,
@@ -646,7 +646,7 @@ def process_camera_frame(frame):
         scale_factor = GAME_WIDTH / frame_width
 
     # Calculate new dimensions
-    new_width = int(frame_width * scale_factor)
+    new_width =  int(frame_width * scale_factor)
     new_height = int(frame_height * scale_factor)
 
     # Resize frame
